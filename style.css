@@ -80,10 +80,6 @@ img {
     border-radius: 1rem;
 }
 
-/* -------------------------------
-   RESPONSIVE MEDIA QUERIES
---------------------------------*/
-
 /* Tablets */
 @media (max-width: 768px) {
     .choice {
