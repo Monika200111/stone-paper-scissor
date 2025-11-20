@@ -1,73 +1,141 @@
-*{
+* {
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
-h1{
+body {
+    background-color: #073b4c;
+    font-family: sans-serif;
+}
+
+/* HEADER */
+h1 {
     background-color: #118ab2;
-    color: rgb(255, 255, 255);
-    height: 5rem;
+    color: white;
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+
+/* GAME OPTIONS */
+.choices {
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 5rem;          /* vertically center*/
+    margin-top: 3rem;
+    gap: 2rem;
+    flex-wrap: wrap;   /* responsive – wrap on small screens */
 }
-.choice{
-    height: 175px;
-    width: 175px;
+
+.choice {
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    transition: 0.2s ease;
 }
-.choice:hover{
+
+.choice:hover {
     cursor: pointer;
     background-color: black;
+}
 
-}
-body{
-    background-color: #073b4c;
-}
-img{
-    height: 150px;
-    width: 150px;
+img {
+    height: 120px;
+    width: 120px;
     object-fit: cover;
     border-radius: 50%;
 }
-.choices{
+
+/* SCORE BOARD */
+.score-board {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
-    gap: 3rem;
-}
-.score-board{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    gap: 7rem;
-    color: rgb(255, 255, 255);
-    margin-top: 5rem;
-
-}
-#user-score{
-    font-size: 4rem;
-}
-#comp-score{
-    font-size: 4rem;
+    margin-top: 3rem;
+    gap: 4rem;
+    color: white;
+    font-size: 1.5rem;
+    flex-wrap: wrap;   /* responsive */
 }
 
-.msg-container{
-    margin-top: 5rem;
+#user-score,
+#comp-score {
+    font-size: 3rem;
 }
-#msg{
-    background-color:#118ab2 ;
-    color: rgb(255, 255, 255);
-    font-size: 2rem;
-    display: inline;
+
+/* MESSAGE */
+.msg-container {
+    margin-top: 3rem;
+}
+
+#msg {
+    background-color: #118ab2;
+    color: white;
+    font-size: 1.5rem;
+    display: inline-block;
     padding: 1rem;
     border-radius: 1rem;
+}
+
+/* -------------------------------
+   RESPONSIVE MEDIA QUERIES
+--------------------------------*/
+
+/* Tablets */
+@media (max-width: 768px) {
+    .choice {
+        height: 120px;
+        width: 120px;
+    }
+
+    img {
+        height: 90px;
+        width: 90px;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 2.5rem;
+    }
+
+    .score-board {
+        gap: 2rem;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    .choice {
+        height: 100px;
+        width: 100px;
+    }
+
+    img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .choices {
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 2rem;
+    }
+
+    #msg {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
 }
